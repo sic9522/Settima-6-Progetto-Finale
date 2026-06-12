@@ -1,0 +1,188 @@
+@use 'colors' as colors;
+@use 'sizes' as sizes;
+@use 'transitions' as trans;
+@use 'darkcolors' as dark;
+
+/*generale*/
+
+p {
+    color: colors.$pcolor;
+}
+
+#studio p {
+    color: white;
+}
+
+h2 {
+    font-weight: bold;
+    }
+
+
+@media (min-width: 768px) {
+    #navbar .navbar-collapse {
+        flex-grow: 0;
+        order: 2;
+        margin-left: auto;
+    }
+
+    #navbarControls {
+        order: 3;
+    }
+}
+
+/*header*/
+
+#navbar {
+    background-color: colors.$primary;
+    color: colors.$light;
+}
+
+#studio {
+    justify-content: center;
+    background-color: colors.$secondary;
+    color: colors.$light;
+    height: sizes.$hero-height;
+}
+
+#studio a:hover {
+    background-color: colors.$tertiary;
+}
+
+/*form*/
+
+.formBtn {
+    color: colors.$light;
+    background-color: colors.$secondary;
+}
+
+.formBtn:hover {
+    background-color: colors.$tertiary;
+    box-shadow: colors.$boxshadow;
+}
+
+/*footer*/
+
+footer {
+    color: colors.$light;
+    background-color: colors.$primary;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+/*toggle switch tema*/
+
+#themeToggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: sizes.$toggle-margin-right;
+    cursor: pointer;
+    line-height: 1;
+
+    &:hover {
+        background: none;
+        box-shadow: none;
+    }
+}
+
+.toggle-track {
+    display: inline-block;
+    width: sizes.$toggle-width;
+    height: sizes.$toggle-height;
+    background-color: hsl(40, 25%, 55%);
+    border-radius: sizes.$toggle-radius;
+    position: relative;
+    vertical-align: middle;
+    transition: background-color trans.$toggle-speed;
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: sizes.$toggle-thumb-top;
+    left: sizes.$toggle-thumb-left;
+    width: sizes.$toggle-thumb-size;
+    height: sizes.$toggle-thumb-size;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform trans.$toggle-speed;
+}
+
+/*card cliccabili*/
+
+.card-clickable {
+    cursor: pointer;
+    transition: transform trans.$card-speed, box-shadow trans.$card-speed;
+
+    &:hover {
+        transform: translateY(sizes.$card-hover-translate);
+        box-shadow: colors.$boxshadow;
+    }
+}
+
+/*tema scuro - stili globali*/
+
+body.dark-mode {
+    background-color: dark.$body-bg;
+    color: dark.$body-color;
+
+    h2, h3 {
+        color: dark.$heading-color;
+    }
+
+    p {
+        color: dark.$text-muted;
+    }
+
+    .card {
+        background-color: dark.$card-bg;
+        border-color: dark.$card-border;
+    }
+
+    #contatti {
+        background-color: dark.$section-bg !important;
+    }
+
+    .form-control,
+    .form-select {
+        background-color: dark.$input-bg;
+        border-color: dark.$input-border;
+        color: dark.$input-color;
+    }
+
+    .form-control::placeholder {
+        color: dark.$placeholder;
+    }
+
+    .form-label {
+        color: dark.$label;
+    }
+
+    .toggle-track {
+        background-color: dark.$toggle-on;
+    }
+
+    .toggle-thumb {
+        transform: translateX(sizes.$toggle-thumb-translate);
+    }
+
+    .modal-content {
+        background-color: dark.$modal-bg;
+        color: dark.$modal-color;
+
+        p {
+            color: dark.$modal-text;
+        }
+    }
+
+    .btn-close {
+        filter: invert(1);
+    }
+}

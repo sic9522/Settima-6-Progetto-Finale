@@ -1,0 +1,162 @@
+/*generale*/
+p {
+  color: hsl(208, 7%, 48%);
+}
+
+#studio p {
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #navbar .navbar-collapse {
+    flex-grow: 0;
+    order: 2;
+    margin-left: auto;
+  }
+  #navbarControls {
+    order: 3;
+  }
+}
+/*header*/
+#navbar {
+  background-color: hsl(20, 20%, 15%);
+  color: hsl(40, 30%, 90%);
+}
+
+#studio {
+  justify-content: center;
+  background-color: hsl(20, 30%, 35%);
+  color: hsl(40, 30%, 90%);
+  height: 500px;
+}
+
+#studio a:hover {
+  background-color: hsl(20, 30%, 25%);
+}
+
+/*form*/
+.formBtn {
+  color: hsl(40, 30%, 90%);
+  background-color: hsl(20, 30%, 35%);
+}
+
+.formBtn:hover {
+  background-color: hsl(20, 30%, 25%);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/*footer*/
+footer {
+  color: hsl(40, 30%, 90%);
+  background-color: hsl(20, 20%, 15%);
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+}
+
+/*toggle switch tema*/
+#themeToggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  line-height: 1;
+}
+#themeToggle:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.toggle-track {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background-color: hsl(40, 25%, 55%);
+  border-radius: 12px;
+  position: relative;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/*card cliccabili*/
+.card-clickable {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/*tema scuro - stili globali*/
+body.dark-mode {
+  background-color: hsl(220, 15%, 10%);
+  color: hsl(220, 20%, 85%);
+}
+body.dark-mode h2, body.dark-mode h3 {
+  color: hsl(220, 20%, 90%);
+}
+body.dark-mode p {
+  color: hsl(220, 15%, 60%);
+}
+body.dark-mode .card {
+  background-color: hsl(220, 15%, 16%);
+  border-color: hsl(220, 15%, 24%);
+}
+body.dark-mode #contatti {
+  background-color: hsl(220, 15%, 13%) !important;
+}
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: hsl(220, 15%, 18%);
+  border-color: hsl(220, 15%, 28%);
+  color: hsl(220, 20%, 85%);
+}
+body.dark-mode .form-control::-moz-placeholder {
+  color: hsl(220, 15%, 48%);
+}
+body.dark-mode .form-control::placeholder {
+  color: hsl(220, 15%, 48%);
+}
+body.dark-mode .form-label {
+  color: hsl(220, 20%, 80%);
+}
+body.dark-mode .toggle-track {
+  background-color: hsl(220, 55%, 45%);
+}
+body.dark-mode .toggle-thumb {
+  transform: translateX(20px);
+}
+body.dark-mode .modal-content {
+  background-color: hsl(220, 15%, 16%);
+  color: hsl(220, 20%, 85%);
+}
+body.dark-mode .modal-content p {
+  color: hsl(220, 15%, 60%);
+}
+body.dark-mode .btn-close {
+  filter: invert(1);
+}/*# sourceMappingURL=style.css.map */
